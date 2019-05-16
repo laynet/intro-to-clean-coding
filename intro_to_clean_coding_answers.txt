@@ -1,0 +1,7 @@
+1.In your own words, explain what clean code is and why it is important.
+good code is easily understood by computers as well as humans and keeping your code clean is the best way to write good code. Keeping it elegant with DRY is an example, making it readable and functional so that if someone changes your legacy code later it won't break
+2. Read this article about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
+I actually listened to an investigative podcast recently about how those crashes were actually due to human error and media sensationalism, but i get the point. I think that Theranos is a good example(aside from the scandal, and that it's not commonly used but had the potential to be) of the importance of code. If an app I'm using crashes, whatever it will get fixed but when a peron's health is on the line it's very important the code work correctly.
+3.Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+FUNCTION convertDegrees(c, f)
+IF F === F THEN 
