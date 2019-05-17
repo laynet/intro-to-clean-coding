@@ -3,5 +3,84 @@ good code is easily understood by computers as well as humans and keeping your c
 2. Read this article about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
 I actually listened to an investigative podcast recently about how those crashes were actually due to human error and media sensationalism, but i get the point. I think that Theranos is a good example(aside from the scandal, and that it's not commonly used but had the potential to be) of the importance of code. If an app I'm using crashes, whatever it will get fixed but when a peron's health is on the line it's very important the code work correctly.
 3.Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
-FUNCTION convertDegrees(c, f)
-IF F === F THEN 
+-the use of variables is confusing to me so I refactored it for that.
+FUNCTION convertDegrees(temp1, temp2)
+  IF temp2 === "F" THEN 
+  SET newTemp to (temp2-32) * (5/9) 
+  PRINT newTemp 
+ELSE
+  IF temp2 = "C" THEN
+  SET newTemp to temp1 * 1.800 + 32.00
+  PRINT newTemp
+END IF
+END FUNCTION
+
+4. to me, this looks clean
+
+5. 
+  a) 
+
+  FUNCTION checkOutCustomer(subTotal, discountRate, paymentType) 
+   SET total to subTotal * discountRate + (subTotal * tax)
+   SET change to total - subTotal * discountRate + (subTotal * tax)
+   IF paymentType = 'CASH' THEN
+       
+       PRINT "Change due: " + change
+   ELSE IF paymentType = 'CREDIT CARD' THEN
+       PRINT "Your credit card has been charged: " + total
+    ELSE 
+       PRINT "Your total due is: " + total
+   END IF
+END FUNCTION
+
+  b)
+  FUNCTION checkoutBook(book, guest)
+  IF guest.accountActive THEN AND NOT(guest.hasOverdueBooks) THEN
+         guest.outstandingFees = 0 THEN
+         APPEND book to guest.books
+         SET book.status to "Checked Out"
+         PRINT "Your books have been issued."
+     ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+  
+  c)
+   CLASS BankAccount
+
+FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+
+ FUNCTION deposit(amount)
+    SET balance to balance + amount
+    PRINT balance
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     IF balance > amount THEN
+       SET balance to balance - amount
+     END IF
+     PRINT balance
+ END FUNCTION
+
+ CLASS Offers
+
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkStatus
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+
+ ....
+ ....
+ ....
+
+END
